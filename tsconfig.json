@@ -1,0 +1,42 @@
+{
+  "include": [
+    "src/**/*",
+    "test"
+  ],
+
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+
+  "compilerOptions": {
+    "outDir": "dist",
+    "baseUrl": "dist",
+    "target": "es6",
+    "module": "commonjs",
+    "declaration": true,
+    "stripInternal": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "paths": {
+      "ember-cli-default-packager": ["./src/index.ts"]
+    },
+    "rootDirs": [
+      "src",
+      "test"
+    ],
+    "typeRoots": [
+      "node_modules/@types/chai",
+      "node_modules/@types/mocha",
+      "node_modules/@types/node"
+    ],
+    "sourceRoot": "./src",
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "experimentalDecorators": true
+  }
+}

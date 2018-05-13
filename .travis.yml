@@ -1,0 +1,28 @@
+sudo: false
+dist: trusty
+
+language: node_js
+node_js:
+  - "10"
+
+cache: yarn
+
+jobs:
+  fail_fast: true
+
+  include:
+
+    - stage: basic test
+      - env: NAME=NODE_8
+        node_js: 8
+
+      - env: NAME=NODE_9
+        node_js: 9
+
+      - env: NAME=NODE_10
+        node_js: 10
+        script:
+          - yarn test:coverage
+
+script:
+  - yarn test:all
