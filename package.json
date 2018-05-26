@@ -16,7 +16,7 @@
     "test": "yarn lint && mocha dist/test --opts test/mocha.opts",
     "test:coverage": "istanbul cover -i \"dist/src/**/*.js\" node_modules/mocha/bin/_mocha -- dist/test --opts test/mocha.opts",
     "test:all": "yarn test && yarn test:coverage",
-    "docs": "typedoc",
+    "docs": "rm -rf docs && typedoc",
     "lint": "tslint --project . -c tslint.json",
     "lint:fix": "tslint --project . -c tslint.json --fix",
     "prepublish": "yarn compile"
