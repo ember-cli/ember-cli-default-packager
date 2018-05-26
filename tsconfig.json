@@ -11,7 +11,7 @@
 
   "compilerOptions": {
     "outDir": "dist",
-    "baseUrl": "dist",
+    "baseUrl": ".",
     "target": "es6",
     "module": "commonjs",
     "declaration": true,
@@ -23,6 +23,7 @@
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node",
     "paths": {
+      "*": ["./types/*"],
       "ember-cli-default-packager": ["./src/index.ts"]
     },
     "rootDirs": [
@@ -30,6 +31,7 @@
       "test"
     ],
     "typeRoots": [
+      "types",
       "node_modules/@types/chai",
       "node_modules/@types/mocha",
       "node_modules/@types/node"
